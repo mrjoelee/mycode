@@ -17,18 +17,19 @@ def main():
 
     #asking a number between 0 to 20
     num = 0
+    max = len(tlgstudents)-1
 
     while True:
         try:
-            num = int(input("Please choose a number between 0 and 20\n"))
+            num = int(input(f"Please choose a number between 1 and {max}\n"))
         except ValueError:
-            print("Please enter a valid number between 0 and 20\n")
+            print(f"Please enter a valid number between 1 and {max}\n")
             continue
         if num >= 0 and num <= 20:
             print("Great Choice!")
             break
         else:
-            print("Invalid. Number must be between 0 and 20")
+            print(f"Invalid. Number must be between 1 and {max}")
 
     # setting the num from input to identify the student from tlgstudent list
     student_name = tlgstudents[num]
