@@ -9,9 +9,11 @@ def main():
         dayOfWeek = input("what day is it?\n")
 
         ##print statement
-        print("Hello, " + user_name + "!" + " Happy " + dayOfWeek, sep="") 
+        print("Hello," + user_name + "!" + " Happy" + dayOfWeek, sep=" ") 
 
-        
+# this condition is TRUE when someone calls the script direclty
+# this condition is FALSE when someone imports the scrip
+if _name_ == "_main_":
 
 main()
 
