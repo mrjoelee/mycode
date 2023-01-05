@@ -16,7 +16,8 @@ print("The second item in the list (port): " + str(my_list[1]) )
 print("The last item in the list (state): " + my_list[2] )
 
 
-#displaying the ip address from iplist
+##displaying the ip address from iplist
+# different way - using f-string print(f"The ip address: {ip_list[3]} and {ip_list[4]})
 print("The ip addresses from ip_list:" + ip_list[3] + " and " + ip_list[4])
 
 
