@@ -27,23 +27,29 @@ def main():
         
             # asking user for a random number
             user_guess= int(input("Choose a number between 1 to 100\n"))
+            if user_guess > 100 or user_guess < 1:
+                print("Invalid: Choose a number between 1 to 100\n")
+                continue
+
+        #value errors when input are letters
         except ValueError:
-            print("Out of bounds. Please choose a number between 1 to 100\n")
+            print("Invalid: Please choose a number between 1 to 100\n")
             continue
-        if user_guess > 100 and user_guess < 1:
-            print("Invalid: Choose a number between 1 to 100\n")
+        
+       # if user_guess > 100 and user_guess < 1:
+            #print("Invalid: Choose a number between 1 to 100\n")
             
         #loops until the number is correct
         while user_guess !=number:
       
-            count+=1
+            count+= 1
 
             #checking if the guess number is equal to the generate number
             if user_guess > (number + 10):
                 print("Too High!\n")
         
             elif user_guess < (number - 10):
-                print("Too low!\n")
+                print("Too Low!\n")
 
             elif user_guess > number:
                 print("Hotness!! -->  but still high!\n")
@@ -54,9 +60,9 @@ def main():
             #asking the user a new put when it's incorrect
             user_guess = int(input("Try again \n"))
     
-            #if answere correctly
+            #if answer correctly
             if user_guess == number:
-                print("You rock! You guessed the number in" , count , "tries!\n")
+                print("Awesome!! You guessed the number in" , count,  "tries!\n")
                 
 
         #count comes to 1 again since it will be a new game
@@ -66,8 +72,9 @@ def main():
     
         if play_again == "no":
 
-            #if false then loops stop, if true start the game again.
+            #if false then loops stop.
             play = False
+            print("Thank you for playing!")
 
 if __name__ == "__main__":
     main()
