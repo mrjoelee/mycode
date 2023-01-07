@@ -12,12 +12,12 @@ Fundamentals of Python
 
 ### Installing
 
-* The latest Python Builds for Windows, MAC OSX, Linux/UNIX are available at [title](https://www.python.org/downloads/)
+* The latest Python Builds for Windows, MAC OSX, Linux/UNIX are available at [Click Here](https://www.python.org/downloads/)
 
 ## Authors
 
 Contributors names and contact info
-
+Course Proctor: Zach Feezer
 Joe Lee  
 joe.lee@example.com
 
