@@ -20,6 +20,6 @@ Fundamentals of Python
 
 Contributors names and contact info:
 
-  Joe Lee  
-  joe.lee@example.com
+* Name: Joe Lee  
+* Email: [Contact Me](joe.lee@tlgcohort.com)
 
