@@ -1,4 +1,4 @@
-# Python Project (mycode)
+# mycode (Python)
 
 ## Description
 
@@ -10,7 +10,7 @@ Fundamentals of Python
 
 ### Dependencies
 
-* Python3.x 
+* Python3.x, Tmux
 
 ### Installing
 
