@@ -3,6 +3,7 @@
 ## Description
 
 Fundamentals of Python 
+
 ![Alt Text](https://media.tenor.com/DxeK02KwNbEAAAAd/java-python.gifhttps://media.tenor.com/DxeK02KwNbEAAAAd/java-python.gif)
 
 ## Getting Started
