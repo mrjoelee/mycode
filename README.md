@@ -16,8 +16,8 @@ Fundamentals of Python
 
 ## Authors
 
-Contributors names and contact info
-Course Proctor: Zach Feezer
-Joe Lee  
-joe.lee@example.com
+Contributors names and contact info:
+
+  Joe Lee  
+  joe.lee@example.com
 
