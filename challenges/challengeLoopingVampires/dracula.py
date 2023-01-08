@@ -19,7 +19,7 @@ def main():
                 if "vampire" in line.lower(): #making sure it reads all vampire word
                     count+=1
                     
-                    print(line + "\n", file=vampyReader)
+                    print(line, file=vampyReader)
 
                     #reads the line that consists "vampire" word
                     #print(line)
