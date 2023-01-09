@@ -39,6 +39,6 @@ class Mulligan(Player):
         if sum(self.dice) <= 9:
             #clears the current dice
             self.dice = []
-            for i in range(3):
-                self.dice.append(random.randint(1,6))
+            self.roll()
+
 
