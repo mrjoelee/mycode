@@ -13,14 +13,14 @@ def main():
     #Read in content of the Dracula novel as a file object
     with open("dracula.txt","r") as draculaReader:
         #write in contect of vampytimes
-        with open("vampytimes.txt", "w") as vampyReader:
+        with open("vampytimes.txt", "a") as vampyReader:
         #read every line of the book
             for line in draculaReader:
                 if "vampire" in line.lower(): #making sure it reads all vampire word
                     count+=1
                     
                     #keep in note, will override anything that it was inside the file
-                    vampyReader.write(line + "\n" )
+                    vampyReader.write(line)
 
                     #reads the line that consists "vampire" word
                     #print(line)
