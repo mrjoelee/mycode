@@ -5,6 +5,7 @@ Class Inheritance
 
 # standard library
 from random import randint
+import crayons
 
 class Player:
     def __init__(self):
@@ -37,6 +38,7 @@ class Mulligan(Player):
     def cheat(self):
         #if the sum of the (3) dices is less than or equal to 9, re-roll again
         if sum(self.dice) <= 9:
+            print(crayons.red("Mulligan in Effect!!", bold=True))
             #clears the current dice
             self.dice = []
             self.roll()

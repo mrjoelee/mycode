@@ -29,16 +29,15 @@ def main():
     cheater3.cheat()
     #both players use their Mulligan methods
 
-
-
-    print(f"Cheater 1 rolled {cheater1.get_dice()}")
-    print(f"Cheater 2 rolled {cheater2.get_dice()}")
-    print(f"Cheater 3 rolled {cheater3.get_dice()}")
-
     #total sum of each cheater's dices
     sum_cheater1 = sum(cheater1.get_dice())
     sum_cheater2 = sum(cheater2.get_dice())
     sum_cheater3 = sum(cheater3.get_dice())
+
+    print(f"Cheater 1 rolled {cheater1.get_dice()} Total: {sum_cheater1}")
+    print(f"Cheater 2 rolled {cheater2.get_dice()} Total: {sum_cheater2}")
+    print(f"Cheater 3 rolled {cheater3.get_dice()} Total: {sum_cheater3}")
+
 
     if sum_cheater1 == sum_cheater2 and sum_cheater1 == sum_cheater3 and sum_cheater2 == sum_cheater3 :
         print("Draw!")
@@ -46,8 +45,14 @@ def main():
         print("Cheater 1 wins!")
     elif sum_cheater2 > sum_cheater1 and sum_cheater2 > sum_cheater3:
         print ("Cheater 2 wins!")
-    else:
+    elif sum_cheater2 == sum_cheater3 and sum_cheater2 > sum_cheater1 and sum_cheater3 > sum_cheater1:
+        print("Cheater 2 and Cheater 3 ties!")
+    elif sum_cheater3 > sum_cheater2 and sum_cheater3 > sum_cheater1:
         print("Cheater 3 wins!")
+    elif sum_cheater1 == sum_cheater3 and sum_cheater1 > sum_cheater2 and sum_cheater3 > sum_cheater2:
+        print("Cheater 1 and Cheater 3 ties!")
+    elif sum_cheater1 == sum_cheater2 and sum_cheater1 > sum_cheater3 and sum_cheater2 > sum_cheater3:
+        print("Cheater 1 and Cheater 2 ties!")
 
    # if sum(cheater1.get_dice()) == sum(cheater2.get_dice()):
    #     print("Draw!")
