@@ -32,3 +32,13 @@ class Cheat_Loaded_Dice(Player): # inheritance of Player
                 self.dice[i] += 1
             i += 1
 
+#take a mulligan (re-roll if total dice sum is less than 9)
+class Mulligan(Player):
+    def cheat(self):
+        #if the sum of the (3) dices is less than or equal to 9, re-roll again
+        if sum(self.dice) <= 9:
+            #clears the current dice
+            self.dice = []
+            for i in range(3):
+                self.dice.append(random.randint(1,6))
+
