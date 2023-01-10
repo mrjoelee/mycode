@@ -155,7 +155,7 @@ while True:
             print(f'Player health: {player}\n')
             if player <= 1:
                 #setting the win as False
-                win = False
+                #win = False
                 print('Weakling...Monster has eaten you!\n')
                 #deletes the item monster
                 del rooms[currentRoom]['item']
