@@ -97,8 +97,8 @@ while True:
             #set the current room to the new room
             currentRoom = rooms[currentRoom][move[1]]
     # if they aren't allowed to go that way:
-    else:
-        print('You can\'t go that way!')
+        else:
+            print('You can\'t go that way!')
 
     #if they type 'get' first
     if move[0] == 'get' :
@@ -129,13 +129,13 @@ while True:
             print("You attack the monster\n")
             #monster attack using the attack_damage() function
             monster -= attack_damage()
-            #delay 1.5  secs
-            time.sleep(1.5)
+            #delay 1  secs
+            time.sleep(1)
             print(f'Monster health: {monster}')
             if monster <= 1:
                 #setting the win as True
                 #win = True
-                print('What a warroior, You defeated the Monster and successfully escaped the house...You WIN! \n')
+                print('What a warrior, You defeated the Monster and successfully escaped the house...You WIN! \n')
                 #deletes the item monster
                 del rooms[currentRoom]['item']
                 #break
@@ -144,8 +144,8 @@ while True:
             print("Monster attacks you!\n")
             #player attacks using the attack_damage() function
             player -= attack_damage()
-            #delay 1.5 secs
-            time.sleep(1.5)
+            #delay 1 secs
+            time.sleep(1)
             print(f'Player health: {player}\n')
             if player <= 1:
                 #setting the win as False
@@ -154,6 +154,7 @@ while True:
                 #deletes the item monster
                 del rooms[currentRoom]['item']
                 break
+                #quit()
         print("Monster got you, go train more and come back!")
         break
 
