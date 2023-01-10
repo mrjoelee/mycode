@@ -5,7 +5,6 @@
 import json
 import random
 import time
-import sys
 
 def showInstructions():
     """Show the game instructions when called"""
@@ -36,6 +35,7 @@ def rooms():
     with open("room.json", "r") as load_room:
         return json.load(load_room)
 
+#attack function
 def attack_damage():
     return random.randint(4,25)
 
@@ -119,7 +119,7 @@ while True:
 
     player = 100
     monster = 100
-    win = False
+    #win = False
     ## If a player enters a room with a monster
     # if 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item']:
     if rooms.get(currentRoom).get('item') == 'monster':
@@ -134,11 +134,13 @@ while True:
             print(f'Monster health: {monster}')
             if monster <= 1:
                 #setting the win as True
-                win = True
-                print('You defeated the Monster!! \n')
+                #win = True
+                print('What a warroior, You defeated the Monster and successfully escaped the house...You WIN! \n')
                 #deletes the item monster
                 del rooms[currentRoom]['item']
-                break
+                #break
+                #quit() will close the whole app
+                quit()
             print("Monster attacks you!\n")
             #player attacks using the attack_damage() function
             player -= attack_damage()
@@ -152,12 +154,15 @@ while True:
                 #deletes the item monster
                 del rooms[currentRoom]['item']
                 break
-        if win == False:
-            print('Monster got you, go train more and come back!')
-            break
-        elif win == True:
-            print("After defeating the monster, you have sucessfully escaped the house...You WIN!")
-            break
+        print("Monster got you, go train more and come back!")
+        break
+
+        #if win == False:
+        #    print('Monster got you, go train more and come back!')
+        #    break
+        #elif win == True:
+        #    print("After defeating the monster, you have sucessfully escaped the house...You WIN!")
+        #    break
 
     ## Define how a player can win
     if currentRoom == 'Garden' and 'key' in inventory and 'potion' in inventory:
