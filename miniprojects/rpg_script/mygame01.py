@@ -17,6 +17,12 @@ def showInstructions():
       get [item]
     ''')
 
+    instruction = "You can go 'south, north, east, west' and get an item depending on the room that you are located.\n2 ways to win: get all the items and escape or defeat the monster.\nIf the monster eats you, then it's GAME OVER!.\n"
+    #typing effect
+    for char in instruction:
+        time.sleep(0.1)
+        print(char, end='',flush=True) # flush is needed to be true, terminal will force it to print it.
+                                       # by default print() ends with a newline, so needs end='' to print on the same line.
 def showStatus():
     """determine the current status of the player"""
     # print the player's current location
